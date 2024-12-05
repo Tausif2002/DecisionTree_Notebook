@@ -168,6 +168,7 @@ const DecisionML = () => {
             </button>
             <div className="w-[100%] flex justify-center items-center text-center mt-4">
               {loading ? (
+                <>
                 <BallTriangle
                 height={100}
                 width={100}
@@ -178,6 +179,8 @@ const DecisionML = () => {
                 wrapperClass=""
                 visible={true}
                 />
+                <p>Please Wait, It may take some time...</p>
+                </>
               ) : prediction ? (
                 <p className="text-[20px] text-black font-bold">
                   Predicted Drug Type: {prediction}
